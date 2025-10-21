@@ -9,7 +9,7 @@ import cors from "cors";
 
 const app = express();
 const server = createServer(app);
-const io = new Server(server);
+const io = connectToSocket(server);
 
 app.use(cors());
 app.use(express.json());
