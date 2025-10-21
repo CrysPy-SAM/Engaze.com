@@ -8,6 +8,7 @@ import mongoose from "mongoose";
 import cors from "cors";
  
 const app = express();
+const server = createServer(app);
 
 
 app.get("/home", (req, res)=>{
