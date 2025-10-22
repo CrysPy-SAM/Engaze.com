@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config(); // load env variables
+dotenv.config(); 
 
 import express from "express";
 import { createServer } from "node:http";
@@ -19,9 +19,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 8000;
 const MONGO_URI = process.env.MONGO_URL;
 
-app.get("/home", (req, res) => {
-  res.json({ hello: "World" });
-});
+app.use(express.json({ limit: "40kb" }));
+app.use(express.urlencoded({ limit: "40kb", extended: true }));
 
 const start = async () => {
   try {
