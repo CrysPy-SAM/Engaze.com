@@ -3,7 +3,7 @@ import httpStatus from "http-status";
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// 👇 FIX: directly define correct backend URL here OR ensure ../environment exports it properly
+//  FIX: directly define correct backend URL here OR ensure ../environment exports it properly
 const server = "http://localhost:8000";
 
 export const AuthContext = createContext({});
