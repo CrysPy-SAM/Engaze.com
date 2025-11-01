@@ -110,7 +110,7 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    const data = {
+    const data = { 
         userData,
         setUserData,
         addToUserHistory,
